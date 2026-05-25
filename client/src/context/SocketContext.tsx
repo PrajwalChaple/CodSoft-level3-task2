@@ -24,7 +24,8 @@ export function SocketProvider({ children }: { children: ReactNode }) {
       return;
     }
 
-    const newSocket = io(window.location.origin, {
+    const socketUrl = import.meta.env.VITE_SOCKET_URL || window.location.origin;
+    const newSocket = io(socketUrl, {
       transports: ['websocket', 'polling'],
     });
 

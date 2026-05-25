@@ -1,0 +1,7 @@
+{
+  "name": "apexflow-root",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm install --prefix client && npm run build --prefix client"
+  }
+}
