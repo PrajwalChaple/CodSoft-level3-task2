@@ -65,13 +65,13 @@ export default function CreateProjectModal({ isOpen, onClose, onCreated }: Creat
       footer={
         <>
           <button className="btn btn-secondary" onClick={handleClose} disabled={loading}>Cancel</button>
-          <button type="submit" className="btn btn-primary" disabled={loading}>
+          <button type="submit" className="btn btn-primary" disabled={loading} form="create-project-form">
             {loading ? 'Creating...' : 'Create Project'}
           </button>
         </>
       }
     >
-      <form onSubmit={handleSubmit}>
+      <form id="create-project-form" onSubmit={handleSubmit}>
         {error && <div className="form-error" style={{ padding: '8px', background: 'var(--color-danger-light)', borderRadius: '8px' }}>{error}</div>}
 
         <div className="form-group">

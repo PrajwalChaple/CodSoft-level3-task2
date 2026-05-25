@@ -82,13 +82,13 @@ export default function CreateTaskModal({ isOpen, onClose, onCreated, projectId,
       footer={
         <>
           <button className="btn btn-secondary" onClick={handleClose} disabled={loading}>Cancel</button>
-          <button type="submit" className="btn btn-primary" disabled={loading}>
+          <button type="submit" className="btn btn-primary" disabled={loading} form="create-task-form">
             {loading ? 'Creating...' : 'Create Task'}
           </button>
         </>
       }
     >
-      <form onSubmit={handleSubmit}>
+      <form id="create-task-form" onSubmit={handleSubmit}>
         {error && <div className="form-error" style={{ padding: '8px', background: 'var(--color-danger-light)', borderRadius: '8px' }}>{error}</div>}
 
         <div className="form-group">
