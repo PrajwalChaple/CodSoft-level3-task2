@@ -49,11 +49,10 @@ const projectSchema = new mongoose.Schema(
 );
 
 // Auto-add owner as a member when creating
-projectSchema.pre('save', function (next) {
+projectSchema.pre('save', function () {
   if (this.isNew && !this.members.includes(this.owner)) {
     this.members.push(this.owner);
   }
-  next();
 });
 
 module.exports = mongoose.model('Project', projectSchema);
