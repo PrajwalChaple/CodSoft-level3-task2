@@ -1,0 +1,21 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+
+# Production builds
+dist/
+**/dist/
+
+# Env config files (contains sensitive db passwords)
+.env
+**/.env
+
+# TS build info
+*.tsbuildinfo
+**/*.tsbuildinfo
+
+# IDE/Editor folders
+.vscode/
+.idea/
+.gemini/
+.env*.local
